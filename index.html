@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+		<title>Bilal Darwish</title>
+	</head>
+
+	<body>
+		<div class="topnav">
+				<a class="active roboto-medium" href="#home">Home</a>
+				<a class="roboto-medium" href="#about">About</a>
+				<a class="roboto-medium" href="#projects">Projects</a>
+			</div>
+
+		<section id="home">
+			<div class="heading">
+				<h1 class="roboto-medium">Bilal Darwish</h1>
+				<h2 class="roboto-light">Rising Grade 11 Student</h2>
+			</div>
+		</section>
+
+		<hr>
+
+		<section id="about">
+			<div class="title">
+				<h2 class="lato-regular">About Me</h2>
+			</div>
+			<div class="text1">
+				<p class="aboutme lato-regular">My name is Bilal Darwish, a soon-to-be 11th grade student at Raha International School. I enjoy theatre (both onstage and backstage) and programming. Recently, I have been learning Python and have experience with HTML, CSS, JavaScript, Java, and C#. I enjoy creating a vast variety of tools, ranging from practical tools to creative projects.</p>
+				<img src="bilal.JPG" alt="Picture of me" class="bilalimg">
+			</div>
+		</section>
+
+		<hr>
+
+		<section id="projects">
+			<div class="title">
+				<h2 class="lato-regular">Projects</h2>
+			</div>
+			<div class="projects">
+				<div class="summit">
+					<h3 class="lato-regular">Summit</h3>
+					<h4 class="lato-light">2024-2025</h4>
+					<img src="summit.png" alt="Summit game icon" class="summitimg">
+					<p class="text2 lato-regular">Created a simple 2D platformer using Unity and C#. This project was part of the MYP Personal Project with the goal of learning C# and applying it to game development. Designed and programmed core mechanics such as movement, jumping, and level design. Also learned creative skills such as pixel art.</p>
+				</div>
+
+				<div class="offbook">
+					<h3 class="lato-regular">Offbook</h3>
+					<h4 class="lato-light">2025-Present</h4>
+					<p class="text2 lato-regular">A tool to help actors memorize lines and go "off book."</p>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			function updateNavigationBar() {
+				const buttons = document.querySelectorAll('.topnav a');
+
+				buttons.forEach(b => b.classList.remove('active'))
+
+				switch (location.hash) {
+					case '#about':
+						buttons[1].classList.add('active')
+						break
+					case '#projects':
+						buttons[2].classList.add('active')
+						break
+					default:
+						buttons[0].classList.add('active')
+				}
+			}
+
+			window.addEventListener('hashchange', updateNavigationBar)
+		</script>
+	</body>
+</html>
