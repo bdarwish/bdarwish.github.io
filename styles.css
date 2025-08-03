@@ -1,10 +1,4 @@
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-
+/* Fonts */
 .roboto-light {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
@@ -23,6 +17,18 @@
 	"wdth" 100;
 }
 
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .lato-regular {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -35,133 +41,310 @@
   font-style: normal;
 }
 
-body {
-	background-color: #292929;
+* {
+  -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+		  box-sizing: border-box;
+	margin: 0;
 	padding: 0;
+}
+
+body {
+	background-color: rgb(32, 32, 32);
+}
+
+/* Header */
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	margin: 0;
-}
-
-.heading {
-	color: white;
-	text-align: center;
-	padding: 90px;
-}
-
-.title {
-	color: white;
-	text-align: center;
-	padding: 30px;
-	font-size: 30px;
-}
-
-.text1 {
-	height: 400px
-}
-
-.bilalimg {
-	width: 30%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	top: -225px;
-	left: -300px;
-}
-
-h1 {
-	font-size: 65px;
-	margin: 0;
-}
-
-h2 {
-	margin: 0;
-}
-
-.aboutme {
-	font-size: 20px;
-	text-align: justify;
-	margin: 50px auto;
-	max-width: 500px;
-	box-sizing: border-box;
-	position: relative;
-	right: -250px;
-	bottom: -30px;
-	color: white;
-}
-
-.summit {
-	display: inline-block;
-	color: white;
-	width: 350px;
-	border: 3px #6a0dad solid;
-	border-radius: 5%;
-	padding: 10px;
-	padding-bottom: 0px;
-	position: relative;
-	right: -20%;
-	text-align: center;
-	margin: 0;
-}
-
-
-.offbook {
-	display: inline-block;
-	color: white;
-	width: 350px;
-	min-height: 370px;
-	border: 3px #6a0dad solid;
-	border-radius: 5%;
-	padding: 10px;
-	padding-bottom: 0px;
-	position: relative;
-	right: -30%;
-	top: -210px;
-	text-align: center;
-	margin: 0;
-}
-
-h3 {
-	font-size: 30px;
-	margin: 0;
-}
-
-h4 {
-	font-size: 15px;
-	margin: 0;
-	margin-bottom: 10px;
-}
-
-.summitimg {
-	width: 30%;
-	margin: 10px;
-}
-
-/* Add a black background color to the top navigation */
-.topnav {
-	background-color: #333;
-	text-align: center;
-	padding: 15px;
-	position: fixed;
-	top: 0;
 	width: 100%;
-	z-index: 10;
+	height: 100vh;
+	background-color: rgb(32, 32, 32);
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-	color: white;
-	padding: 16px;
+header .intro {
+	font-size: 2rem;
+	color: #BBBBBB;
+}
+
+header .title {
+	font-size: 4rem;
+	color: #E0B0FF;
+}
+
+header .line {
+	width: 50ch;
+	border: 0;
+	height: 0.6ch;
+	background-color: #E0B0FF;
+	border-radius: 500px;
+	margin: 1rem auto;
+
+	transform-origin: left;
+	transform: scaleX(0);	
+	animation: drawLine 1.75s 0.25s forwards ease-in-out;
+}
+
+header .occupation {
+	font-size: 1.5rem;
+	color: #BBBBBB;
+}
+
+header .scroll {
+	position: relative;
+	bottom: -12.5rem;
+	width: 5vw;
+
+	opacity: 0;
+	animation: showScroll 0.5s 2.5s forwards ease-out;
+}
+
+.separator {
+	border: none;
+	height: 0.25rem;
+	background-color: #E0B0FF;
+}
+
+/* About Me Section */
+#about {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #2b2b2b;
+	width: 100%;
+	height: 80vh;
+	text-align: center;
+}
+
+#about .header {
+	font-size: 3rem;
+	color: #BBBBBB;
+}
+
+#about .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10rem;
+}
+
+#about .content .introimg {
+	width: 30vw;
+}
+
+#about .content .text {
+	color: #BBBBBB;
+	text-align: left;
+	font-size: 1.15rem;
+	line-height: 2;
+	width: 30vw;
+}
+
+/* Experience Section */
+#experience {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: rgb(32, 32, 32);
+	width: 100%;
+	height: 80vh;
+	text-align: center;
+}
+
+#experience .header {
+	font-size: 3rem;
+	color: #BBBBBB;
+}
+
+#experience .description {
+	margin-top: 0.5rem;
+	font-size: 1.25rem;
+	color: #BBBBBB;
+}
+
+#experience .boxes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 10rem;
+}
+
+#experience .skillsbox {
+	gap: 10rem;
+	background-color: #E0B0FF;
+	padding: 1rem;
+	border-radius: 15px;
+	width: 17.5vw;
+	text-align: center;
+	align-self: stretch;
+}
+
+#experience .boxes .skillsbox .title {
+	font-size: 1.75rem;
+}
+
+#experience .boxes .skillsbox .languages {
+	font-size: 1.15rem;
+	line-height: 1.75;
+}
+
+#experience .experiencebox {
+	gap: 10rem;
+	background-color: #E0B0FF;
+	padding: 1rem;
+	border-radius: 15px;
+	width: 17.5vw;
+	text-align: center;
+	align-self: stretch;
+}
+
+#experience .boxes .experiencebox .title {
+	font-size: 1.75rem;
+}
+
+#experience .boxes .experiencebox .experience {
+	font-size: 1.15rem;
+	line-height: 1.75;
+}
+
+/* Projects Section */
+#projects {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #2b2b2b;
+	width: 100%;
+	height: 80vh;
+	text-align: center;
+}
+
+#projects .header {
+	font-size: 3rem;
+	color: #BBBBBB;
+}
+
+#projects .description {
+	margin-top: 0.5rem;
+	font-size: 1.25rem;
+	color: #BBBBBB;
+}
+
+#projects .boxes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 15rem;
+}
+
+/* Summit */
+#projects .boxes .summit {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	align-self: stretch;
+	gap: 1rem;
+	background-color: #E0B0FF;
+	padding: 1.5rem;
+	border-radius: 15px;
+	width: 25vw;
+	color: black;
+	text-align: left;
+}
+
+#projects .boxes .summit .title {
+	font-size: 1.75rem;
+	text-align: center;
+}
+
+#projects .boxes .summit .summitimg {
+	width: 6vw;
+}
+
+/* OffBook */
+#projects .boxes .offbook {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	align-self: stretch;
+	gap: 1rem;
+	background-color: #E0B0FF;
+	padding: 1.5rem;
+	border-radius: 15px;
+	width: 25vw;
+	color: black;
+	text-align: left;
+}
+
+#projects .boxes .offbook .title {
+	font-size: 1.75rem;
+	text-align: center;
+}
+
+#projects .boxes .offbook .offbookimg {
+	width: 8vw;
+}
+
+/* Footer */
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 30vh;
+	color: #BBBBBB;
+	margin-bottom: 3rem;
+}
+
+footer .title {
+	margin: 3rem;
+	margin-bottom: 2rem;
+	font-size: 3rem;
+}
+
+footer .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 1rem;
+}
+
+footer .content .link {
+	font-size: 1rem;
+	color: #BBBBBB;
 	text-decoration: none;
-	font-size: 17px;
-	z-index: 11;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-	background-color: #3a3a3a;
+footer .content .link:hover {
+	color: #E0B0FF;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-	background-color: #6a0dad;
+#end {
+	color: #BBBBBB;
+	padding: 1rem;
+	text-align: right;
+	background-color: #2b2b2b;
+}
+
+/* Animation Functions */
+@keyframes drawLine {
+  to {
+	transform: scaleX(1);
+  }
+}
+
+@keyframes showScroll {
+	to {
+		opacity: 1;
+	}
 }

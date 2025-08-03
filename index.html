@@ -9,72 +9,94 @@
 	</head>
 
 	<body>
-		<div class="topnav">
-				<a class="active roboto-medium" href="#home">Home</a>
-				<a class="roboto-medium" href="#about">About</a>
-				<a class="roboto-medium" href="#projects">Projects</a>
+		<header>
+			<div class="content">
+				<h2 class="intro lato-regular">Hi, my name is</h2>
+				<h1 class="title lato-bold">Bilal Darwish.</h1>
+				<hr class="line">
+				<h3 class="occupation lato-regular">Rising Grade 11 Student</h3>
 			</div>
 
-		<section id="home">
-			<div class="heading">
-				<h1 class="roboto-medium">Bilal Darwish</h1>
-				<h2 class="roboto-light">Rising Grade 11 Student</h2>
-			</div>
-		</section>
+			<img src=image.png class="scroll">
+		</header>
 
-		<hr>
+		<hr class="separator">
 
 		<section id="about">
-			<div class="title">
-				<h2 class="lato-regular">About Me</h2>
-			</div>
-			<div class="text1">
-				<p class="aboutme lato-regular">My name is Bilal Darwish, a soon-to-be 11th grade student at Raha International School. I enjoy theatre (both onstage and backstage) and programming. Recently, I have been learning Python and have experience with HTML, CSS, JavaScript, Java, and C#. I enjoy creating a vast variety of tools, ranging from practical tools to creative projects.</p>
-				<img src="bilal.JPG" alt="Picture of me" class="bilalimg">
+			<h2 class="header lato-bold">About Me</h2>
+			<div class=content>	
+				<img src=bilal.JPG class="introimg">
+				<p class="text lato-regular">
+					I'm a student with a passion of developing projects—from practical tools to creative applications. I'm currently exploring AI, although I've previously focused on areas like game development. I love solving problems and learning new skills related to development. Other than coding, I also enjoy theatre (both onstage and offstage) and volleyball. 
+				</p>
 			</div>
 		</section>
 
-		<hr>
+		<hr class="separator">
+
+		<section id="experience">
+			<div>
+				<h2 class="header lato-bold">Skills & Experience</h2>
+				<p class="description lato-regular">My skills in programming and certifications I received.</p>
+			</div>
+			<div class="boxes">
+				<div class="skillsbox">
+					<h3 class="title lato-regular">Skills</h3>
+					<div class="languages lato-light">
+						<p>Python</p>
+						<p>C#</p>
+						<p>HTML</p>
+						<p>CSS</p>
+						<p>Java</p>
+						<p>JavaScript</p>
+					</div>
+				</div>
+
+				<div class="experiencebox">
+					<h3 class="title lato-regular">Experience</h3>
+					<div class="experience lato-light">
+						<p>Galaxy AI Pioneers</p>
+						<p>TCM Security: Programming 100: Fundamentals</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<hr class="separator">
 
 		<section id="projects">
-			<div class="title">
-				<h2 class="lato-regular">Projects</h2>
+			<div>
+				<h2 class="header lato-bold">Projects</h2>
+				<p class="description lato-regular">Some of the projects I have made.</p>
 			</div>
-			<div class="projects">
+
+			<div class="boxes">
 				<div class="summit">
-					<h3 class="lato-regular">Summit</h3>
-					<h4 class="lato-light">Sept. 2024 - Feb. 2025</h4>
-					<img src="summit.png" alt="Summit game icon" class="summitimg">
-					<p class="text2 lato-regular">Created a simple 2D platformer using Unity and C#. This project was part of the MYP Personal Project with the goal of learning C# and applying it to game development. Designed and programmed core mechanics such as movement, jumping, and level design. Also learned creative skills such as pixel art.</p>
+					<h3 class="title lato-regular">Summit</h3>
+					<img class="summitimg" src=summit.png>
+					<p class="lato-light">Created a simple 2D platformer using Unity and C#. This project was part of the MYP Personal Project with the goal of learning C# and applying it to game development. Designed and programmed core mechanics such as movement, jumping, and level design. Also learned creative skills such as pixel art.</p>
 				</div>
 
 				<div class="offbook">
-					<h3 class="lato-regular">OffBook</h3>
-					<h4 class="lato-light">Aug. 2025 - Now</h4>
-					<p class="text2 lato-regular">A tool to help actors memorize lines and go "off book." Made using Python and libraries, including pyttsx3 and SpeechRecognition.</p>
+					<h3 class="title lato-regular">OffBook</h3>
+					<img class="offbookimg" src=offbook-logo.png>
+					<p class="lato-light">A tool to help actors go "off book." Using Python, the user inputs a scene from a play/musical and their character. The application then selects a random line and reads the previous line to test the user's memorization of their character's dialogue. Implements RealtimeTTS, SpeechRecognition, and LangChain.</p>
 				</div>
 			</div>
 		</section>
 
-		<script>
-			function updateNavigationBar() {
-				const buttons = document.querySelectorAll('.topnav a');
+		<hr class="separator">
 
-				buttons.forEach(b => b.classList.remove('active'))
+		<footer>
+			<h2 class="title lato-regular">Contact Me</h2>
+			<div class="content">
+				<p><a class="link lato-regular" href="mailto:darwish.b.bilal@gmail.com">darwish.b.bilal@gmail.com</a></p>
+				<p><a class="link lato-regular" href="https://github.com/bdarwish" target="_blank">github.com/bdarwish</a></p>
+			</div>
+		</footer>
 
-				switch (location.hash) {
-					case '#about':
-						buttons[1].classList.add('active')
-						break
-					case '#projects':
-						buttons[2].classList.add('active')
-						break
-					default:
-						buttons[0].classList.add('active')
-				}
-			}
-
-			window.addEventListener('hashchange', updateNavigationBar)
-		</script>
+		<section id="end">
+			<p class="lato-light">© Copyright 2025</p>
+		</section>
 	</body>
 </html>
